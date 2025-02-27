@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalTalk Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LocalTalk Web</h1>
+        <div id="roomInfo" class="room-info">
+            <p id="roomStatus">Not connected to any room</p>
+            <p id="myRoomId"></p>
+        </div>
+        <div id="connectionControls">
+            <button id="createRoomBtn" class="action-button">Create New Room</button>
+            <div class="join-controls">
+ng                <input type="text" 
+                       id="roomId" 
+                       placeholder="Enter 4-digit room code"
+                       maxlength="4"
+                       style="text-transform: uppercase;">
+                <button id="joinBtn">Join Room</button>
+            </div>
+        </div>
+        <div id="peerList" class="peer-list"></div>
+        <div class="talk-controls">
+            <button id="talkButton" class="talk-button">
+                Press to Talk
+            </button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
